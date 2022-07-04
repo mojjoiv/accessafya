@@ -45,7 +45,7 @@ export default function AddClientModal() {
       >
         <div className='d-flex align-items-center'>
           <FaUser className='icon' />
-          <div>Add Client</div>
+          <div>Add Hospital</div>
         </div>
       </button>
 
@@ -59,7 +59,7 @@ export default function AddClientModal() {
           <div className='modal-content'>
             <div className='modal-header'>
               <h5 className='modal-title' id='addClientModalLabel'>
-                Add Client
+                Add Staff
               </h5>
               <button
                 type='button'

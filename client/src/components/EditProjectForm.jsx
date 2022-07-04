@@ -25,7 +25,7 @@ export default function EditProjectForm({ project }) {
 
   return (
     <div className='mt-5'>
-      <h3>Update Project Details</h3>
+      <h3>Update Staff Details</h3>
       <form onSubmit={onSubmit}>
         <div className='mb-3'>
           <label className='form-label'>Name</label>
@@ -38,7 +38,7 @@ export default function EditProjectForm({ project }) {
           />
         </div>
         <div className='mb-3'>
-          <label className='form-label'>Description</label>
+          <label className='form-label'>Efficiency</label>
           <textarea
             className='form-control'
             id='description'
@@ -47,7 +47,7 @@ export default function EditProjectForm({ project }) {
           ></textarea>
         </div>
         <div className='mb-3'>
-          <label className='form-label'>Status</label>
+          <label className='form-label'>Activity</label>
           <select
             id='status'
             className='form-select'

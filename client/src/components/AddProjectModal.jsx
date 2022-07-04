@@ -55,7 +55,7 @@ export default function AddClientModal() {
           >
             <div className='d-flex align-items-center'>
               <FaList className='icon' />
-              <div>New Project</div>
+              <div>New Hospital</div>
             </div>
           </button>
 
@@ -69,7 +69,7 @@ export default function AddClientModal() {
               <div className='modal-content'>
                 <div className='modal-header'>
                   <h5 className='modal-title' id='addProjectModalLabel'>
-                    New Project
+                    New Hospital
                   </h5>
                   <button
                     type='button'
@@ -107,21 +107,21 @@ export default function AddClientModal() {
                         value={status}
                         onChange={(e) => setStatus(e.target.value)}
                       >
-                        <option value='new'>Not Started</option>
-                        <option value='progress'>In Progress</option>
-                        <option value='completed'>Completed</option>
+                        <option value='new'>Opened Late</option>
+                        <option value='progress'>Open</option>
+                        <option value='completed'>Closed</option>
                       </select>
                     </div>
 
                     <div className='mb-3'>
-                      <label className='form-label'>Client</label>
+                      <label className='form-label'>Staff</label>
                       <select
                         id='clientId'
                         className='form-select'
                         value={clientId}
                         onChange={(e) => setClientId(e.target.value)}
                       >
-                        <option value=''>Select Client</option>
+                        <option value=''>Select Staff</option>
                         {data.clients.map((client) => (
                           <option key={client.id} value={client.id}>
                             {client.name}
