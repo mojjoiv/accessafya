@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
+import NavBar from './pages/NavBar'
+import Nav from './pages/Nav'
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import Home from './pages/Home';
 import Project from './pages/Project';
@@ -34,10 +36,13 @@ function App() {
     <>
       <ApolloProvider client={client}>
         <Router>
-          <Header />
+          {/* <Header /> */}
+          <NavBar/>
+          <br/>
           <div className='container'>
             <Routes>
               <Route path='/' element={<Home />} />
+              {/* <Route path='/nav' element={<Nav />} /> */}
               <Route path='/projects/:id' element={<Project />} />
               <Route path='*' element={<NotFound />} />
             </Routes>
