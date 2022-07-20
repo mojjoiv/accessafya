@@ -34,6 +34,7 @@ import {
 } from 'react-icons/fi';
 import { IconType } from 'react-icons';
 import { ReactText } from 'react';
+import Home from "./Home"
 
 interface LinkItemProps {
   name: string;
@@ -223,6 +224,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
           </Menu>
         </Flex>
       </HStack>
+      <Home/>
     </Flex>
   );
 };

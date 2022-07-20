@@ -34,7 +34,8 @@ import {
 } from 'react-icons/fi';
 import { IconType } from 'react-icons';
 import { ReactText } from 'react';
-import Home from './Home';
+import AddProjectModal from '../components/AddProjectModal';
+import AddClientModal from '../components/AddClientModal';
 
 interface LinkItemProps {
   name: string;
@@ -169,6 +170,12 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
         icon={<FiMenu />}
       />
 
+<div className='d-flex gap-3 float-left'>
+        <AddClientModal />
+        <AddProjectModal />
+        {/* <Addnew/> */}
+      </div>
+
       <Text
         display={{ base: 'flex', md: 'none' }}
         fontSize="2xl"
@@ -176,7 +183,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
         fontWeight="bold">
         Logo
       </Text>
-
+        
       <HStack spacing={{ base: '0', md: '6' }}>
         <IconButton
           size="lg"
@@ -224,7 +231,6 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
           </Menu>
         </Flex>
       </HStack>
-      {/* <Home/> */}
     </Flex>
   );
 };

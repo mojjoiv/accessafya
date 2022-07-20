@@ -1,9 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import NavBar from './pages/NavBar'
+import Footer from './pages/Footer'
 import Nav from './pages/Nav'
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import Home from './pages/Home';
+import Home2 from './pages/Home2';
 import Project from './pages/Project';
 import NotFound from './pages/NotFound';
 
@@ -42,11 +44,13 @@ function App() {
           <div className='container'>
             <Routes>
               <Route path='/' element={<Home />} />
-              {/* <Route path='/nav' element={<Nav />} /> */}
+              <Route path='/newui' element={<Home2 />} />
+              <Route path='/nav' element={<Nav />} />
               <Route path='/projects/:id' element={<Project />} />
               <Route path='*' element={<NotFound />} />
             </Routes>
           </div>
+          <Footer/>
         </Router>
       </ApolloProvider>
     </>

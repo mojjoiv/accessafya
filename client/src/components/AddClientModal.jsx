@@ -4,7 +4,10 @@ import { useMutation } from '@apollo/client';
 import { ADD_CLIENT } from '../mutations/clientMutations';
 import { GET_CLIENTS } from '../queries/clientQueries';
 
-export default function AddClientModal() {
+//chakra ui modification imports
+import { Button, ButtonGroup } from '@chakra-ui/react'
+
+export default function Addnew() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -37,17 +40,21 @@ export default function AddClientModal() {
 
   return (
     <>
-      <button
+      <Button
         type='button'
-        className='btn btn-secondary'
+        // className='btn btn-secondary'
         data-bs-toggle='modal'
         data-bs-target='#addClientModal'
+        colorScheme='purple' variant='outline'
       >
         <div className='d-flex align-items-center'>
           <FaUser className='icon' />
-          <div>Add Hospital</div>
+          <div>Add Staff</div>
         </div>
-      </button>
+      </Button>
+      {/* <Button colorScheme='teal' variant='outline'>
+    Button
+  </Button> */}
 
       <div
         className='modal fade'
@@ -101,13 +108,14 @@ export default function AddClientModal() {
                   />
                 </div>
 
-                <button
+                <Button
                   type='submit'
                   data-bs-dismiss='modal'
-                  className='btn btn-secondary'
+                  // className='btn btn-secondary'
+                  colorScheme='purple' variant='outline'
                 >
                   Submit
-                </button>
+                </Button>
               </form>
             </div>
           </div>
